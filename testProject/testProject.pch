@@ -1,0 +1,137 @@
+//
+//  testProject.pch
+//  testProject
+//
+//  Created by mac3 on 17/2/13.
+//  Copyright © 2017年 test. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#import "HttpDefine.h"
+#import "ColorDefine.h"
+#import "SaveDefine.h"
+
+#import "UIImageView+WebCache.h"
+#import "NetworkTool.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "Masonry.h"
+
+#import "DDCategories.h"
+
+#import "Helper.h"
+#import "FSTextView.h"
+#import "LoginViewController.h"
+
+#ifdef DEBUG
+
+#define DLLog(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define DLLog(...)
+
+#endif
+
+#define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+#define KScreenWidth [UIScreen mainScreen].bounds.size.width
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define kw(R)               (R) * (KScreenWidth) / 320.0
+#define kh(R)               (R) * (KScreenHeight) / 568.0
+
+#define kFont(F)            [UIFont systemFontOfSize:((F) * (KScreenWidth) / 320)]
+#define ktextFont(F)        [UIFont fontWithName:@"Helvetica-Bold" size:((F) * (KScreenWidth) / 320)]
+
+
+//为NSUserDefaults 添加object和key
+#define Kusersave(object,key) [[NSUserDefaults standardUserDefaults] setObject:object forKey:key]
+//读取NSUserDefaults中key的元素
+#define Kuserread(key) [[NSUserDefaults standardUserDefaults] objectForKey:key]
+//删除NSUserDefaults中key的元素
+#define Kuserdelete(key) [[NSUserDefaults standardUserDefaults] removeObjectForKey:key]
+
+//获取temp
+#define kPathTemp NSTemporaryDirectory()
+//获取沙盒 Document
+#define kPathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
+//获取沙盒 Cache
+#define kPathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
+/****************判空****************/
+//字符串是否为空
+#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
+
+//数组是否为空
+#define kArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
+
+//字典是否为空
+#define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
+
+//是否是空对象
+#define kObjectIsEmpty(_object) (_object == nil \
+|| [_object isKindOfClass:[NSNull class]] \
+|| ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
+|| ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
+
+
+//设置 view 圆角和边框
+#define KYJViewBorderRadius(View, Radius, Width, Color)\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
+
+/** 时间戳 */
+#define KtimeSign [MLString(@"%.f",(double)([[NSDate date] timeIntervalSince1970]*1000)) doubleValue]
+//加载png图片
+# define Kimage(imageName)  [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:imageName ofType:@"png"]]
+//转换字符串
+#define KCHANGE_STR(string)     [[NSString alloc]initWithFormat:@"%@",string]
+
+
+
+#define KcreateMuDic          [[NSMutableDictionary alloc]init]
+#define kcreateMuArry         [[NSMutableArray alloc]init]
+#define Kcontent              [retDic objectForKey:@"msg"]
+#define Kresult               [retDic objectForKey:@"status"]
+#define Kinfo                 [retDic objectForKey:@"info"]
+#define kWeakSelf              __weak __typeof(self)weakSelf = self;
+
+/***************热点问题******************/
+
+#define SYSTEM_VERSION    [[[UIDevice currentDevice] systemVersion] doubleValue]
+
+// 标准系统状态栏高度
+#define SYS_STATUSBAR_HEIGHT                20
+// 热点栏高度
+#define HOTSPOT_STATUSBAR_HEIGHT            20
+
+// 导航栏（UINavigationController.UINavigationBar）高度
+#define NAVIGATIONBAR_HEIGHT                44
+
+// 标签栏（UITabBarController.UITabBar）高度
+#define TABBAR_HEIGHT                       48
+
+// APP_STATUSBAR_HEIGHT=SYS_STATUSBAR_HEIGHT+[HOTSPOT_STATUSBAR_HEIGHT]
+#define APP_STATUSBAR_HEIGHT                (CGRectGetHeight([UIApplication sharedApplication].statusBarFrame))
+
+// 根据APP_STATUSBAR_HEIGHT判断是否存在热点栏
+#define IS_HOTSPOT_CONNECTED                (APP_STATUSBAR_HEIGHT==(SYS_STATUSBAR_HEIGHT+HOTSPOT_STATUSBAR_HEIGHT)?YES:NO)
+
+// 无热点栏时，标准系统状态栏高度+导航栏高度
+#define NOSTATUS_NAV_HEIGHT                 (SYS_STATUSBAR_HEIGHT+NAVIGATIONBAR_HEIGHT)
+
+// 实时系统状态栏高度+导航栏高度，如有热点栏，其高度包含在APP_STATUSBAR_HEIGHT中。
+#define STATUS_NAV_HEIGHT                   (APP_STATUSBAR_HEIGHT+NAVIGATIONBAR_HEIGHT)
+
+//TableView的高度,减去tabbar和nav的高度
+#define TableViewHomeHeight                 (KScreenHeight-APP_STATUSBAR_HEIGHT-NAVIGATIONBAR_HEIGHT-TABBAR_HEIGHT)
+
+//TableView的高度,减去nav的高度
+#define TableViewHeight                     (KScreenHeight-APP_STATUSBAR_HEIGHT-NAVIGATIONBAR_HEIGHT)
+
+
+#endif /* testProject_pch */
