@@ -14,6 +14,9 @@
 #import "CommonTableViewController.h"
 #import "DDEmitterLayerViewController.h"
 #import "ProgressViewController.h"
+#import "FloatingButtonViewController.h"
+#import "AnimationViewController.h"
+
 
 @interface TableTestViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -54,8 +57,8 @@ static NSString *identify = @"TestTableViewCell";
                          @"点我-进tableview列表",
                          @"点我-进粒子动画效果",
                          @"点我-进环形进度",
-                         @"待定",
-                         @"待定"];
+                         @"点我-进可拖动按钮",
+                         @"点我-进动画效果"];
     
     for (NSInteger i = 0; i < descArr.count; i ++)
     {
@@ -97,7 +100,13 @@ static NSString *identify = @"TestTableViewCell";
             break;
         case 4:
         {
-            CollectionViewController *chooseVC = [[CollectionViewController alloc]init];
+            FloatingButtonViewController *chooseVC = [[FloatingButtonViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 5:
+        {
+            AnimationViewController *chooseVC = [[AnimationViewController alloc]init];
             [self.navigationController pushViewController:chooseVC animated:YES];
         }
             break;
@@ -210,7 +219,7 @@ static NSString *identify = @"TestTableViewCell";
 #pragma - mark - tableview头部高度
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return kh(200);
+    return kh(20);
 }
 
 #pragma - mark - tableview尾部view

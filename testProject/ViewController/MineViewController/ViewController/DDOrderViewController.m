@@ -32,7 +32,8 @@
     [temp addObject:self];
     [self.navigationController setViewControllers:temp animated:YES];
     
-   //AppDelegate *appDeleage = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    AppDelegate *appDeleage = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    appDeleage.tab.selectedIndex = 5;
     
 }
 

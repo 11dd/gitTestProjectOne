@@ -154,6 +154,8 @@
 		8A7185541E83ABA000C93E14 /* DDEmitterLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7185531E83ABA000C93E14 /* DDEmitterLayerViewController.m */; };
 		8A7185581E83ADE500C93E14 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7185571E83ADE500C93E14 /* ProgressViewController.m */; };
 		8A71855B1E83AE1A00C93E14 /* LDProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A71855A1E83AE1A00C93E14 /* LDProgressBar.m */; };
+		8A71855E1E83B90000C93E14 /* FloatingButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A71855D1E83B90000C93E14 /* FloatingButtonViewController.m */; };
+		8A7185631E83B9EF00C93E14 /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7185621E83B9EF00C93E14 /* AnimationViewController.m */; };
 		8AD49F271E7B7A1300768B56 /* DDCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD49F261E7B7A1300768B56 /* DDCarouselView.m */; };
 		8AD49F2A1E7B7BDD00768B56 /* CommonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD49F291E7B7BDD00768B56 /* CommonTableViewController.m */; };
 		8AD49F2D1E7B7C0D00768B56 /* CommonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD49F2C1E7B7C0D00768B56 /* CommonTableViewCell.m */; };
@@ -526,6 +528,10 @@
 		8A7185571E83ADE500C93E14 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
 		8A7185591E83AE1A00C93E14 /* LDProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDProgressBar.h; sourceTree = "<group>"; };
 		8A71855A1E83AE1A00C93E14 /* LDProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDProgressBar.m; sourceTree = "<group>"; };
+		8A71855C1E83B90000C93E14 /* FloatingButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatingButtonViewController.h; sourceTree = "<group>"; };
+		8A71855D1E83B90000C93E14 /* FloatingButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatingButtonViewController.m; sourceTree = "<group>"; };
+		8A7185611E83B9EF00C93E14 /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
+		8A7185621E83B9EF00C93E14 /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
 		8AD49F251E7B7A1300768B56 /* DDCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCarouselView.h; sourceTree = "<group>"; };
 		8AD49F261E7B7A1300768B56 /* DDCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCarouselView.m; sourceTree = "<group>"; };
 		8AD49F281E7B7BDD00768B56 /* CommonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTableViewController.h; sourceTree = "<group>"; };
@@ -728,6 +734,8 @@
 				8A2066B01E766B07001D0D13 /* TestTableViewCell.xib */,
 				8A2066B31E766B60001D0D13 /* TestModel.h */,
 				8A2066B41E766B60001D0D13 /* TestModel.m */,
+				8A7185601E83B9CC00C93E14 /* 动画效果 */,
+				8A71855F1E83B90E00C93E14 /* 可拖动按钮 */,
 				8A7185551E83AD7D00C93E14 /* 环形进度 */,
 				8A7185511E83AB6C00C93E14 /* 粒子效果 */,
 				8A71854F1E83AA9300C93E14 /* CollectionView */,
@@ -1523,6 +1531,24 @@
 			name = "环形进度";
 			sourceTree = "<group>";
 		};
+		8A71855F1E83B90E00C93E14 /* 可拖动按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				8A71855C1E83B90000C93E14 /* FloatingButtonViewController.h */,
+				8A71855D1E83B90000C93E14 /* FloatingButtonViewController.m */,
+			);
+			name = "可拖动按钮";
+			sourceTree = "<group>";
+		};
+		8A7185601E83B9CC00C93E14 /* 动画效果 */ = {
+			isa = PBXGroup;
+			children = (
+				8A7185611E83B9EF00C93E14 /* AnimationViewController.h */,
+				8A7185621E83B9EF00C93E14 /* AnimationViewController.m */,
+			);
+			name = "动画效果";
+			sourceTree = "<group>";
+		};
 		8AD49F241E7B7A1300768B56 /* CarouselView(轻量级轮播) */ = {
 			isa = PBXGroup;
 			children = (
@@ -2028,6 +2054,7 @@
 				8A20669D1E763F56001D0D13 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				8A2067011E769B73001D0D13 /* AFHTTPSessionManager.m in Sources */,
 				8A20669E1E763F56001D0D13 /* UITableView+FDKeyedHeightCache.m in Sources */,
+				8A71855E1E83B90000C93E14 /* FloatingButtonViewController.m in Sources */,
 				8AF39E1A1E517E190065F9F3 /* TAAnimatedDotView.m in Sources */,
 				8AD49F9B1E7BEE4000768B56 /* ChagePassWordViewController.m in Sources */,
 				8A2066D91E7692A9001D0D13 /* NSObject+MJClass.m in Sources */,
@@ -2054,6 +2081,7 @@
 				8AD49F571E7BC4F900768B56 /* FSTextView.m in Sources */,
 				8A3E34B91E72520300A1C756 /* MJRefreshAutoStateFooter.m in Sources */,
 				8A3E34C31E72520300A1C756 /* UIScrollView+MJExtension.m in Sources */,
+				8A7185631E83B9EF00C93E14 /* AnimationViewController.m in Sources */,
 				8AF39F041E51986E0065F9F3 /* MineViewController.m in Sources */,
 				8A3E34D81E72520300A1C756 /* UIView+WebCacheOperation.m in Sources */,
 				8AF39F1A1E519BC30065F9F3 /* SecondDetailsViewController.m in Sources */,

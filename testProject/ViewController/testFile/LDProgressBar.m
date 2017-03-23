@@ -75,7 +75,7 @@
     
     [[UIColor colorWithRed:77/255.0 green:77/255.0 blue:77/255.0 alpha:1.0]set];
     
-    CGContextAddArc(ctx, kSW/2 , kSW/2, kSW/2-8, -3*M_PI_4, 5*M_PI_4, 0);
+    CGContextAddArc(ctx, kSW/2 , kSW/2, kSW/2-8, -2*M_PI_4, 6*M_PI_4, 0);
     
     CGContextStrokePath(ctx);
     
