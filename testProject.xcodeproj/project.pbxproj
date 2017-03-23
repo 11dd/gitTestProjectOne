@@ -151,6 +151,9 @@
 		8A5A42F11E7911A2001F348A /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A42F01E7911A2001F348A /* NullSafe.m */; };
 		8A5A42FE1E7915D1001F348A /* libGeTuiSdk-1.6.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5A42FC1E7915D1001F348A /* libGeTuiSdk-1.6.2.0.a */; };
 		8A5A42FF1E7915D1001F348A /* libGtExtensionSdk-1.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5A42FD1E7915D1001F348A /* libGtExtensionSdk-1.1.0.a */; };
+		8A7185541E83ABA000C93E14 /* DDEmitterLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7185531E83ABA000C93E14 /* DDEmitterLayerViewController.m */; };
+		8A7185581E83ADE500C93E14 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7185571E83ADE500C93E14 /* ProgressViewController.m */; };
+		8A71855B1E83AE1A00C93E14 /* LDProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A71855A1E83AE1A00C93E14 /* LDProgressBar.m */; };
 		8AD49F271E7B7A1300768B56 /* DDCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD49F261E7B7A1300768B56 /* DDCarouselView.m */; };
 		8AD49F2A1E7B7BDD00768B56 /* CommonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD49F291E7B7BDD00768B56 /* CommonTableViewController.m */; };
 		8AD49F2D1E7B7C0D00768B56 /* CommonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD49F2C1E7B7C0D00768B56 /* CommonTableViewCell.m */; };
@@ -517,6 +520,12 @@
 		8A5A43001E791D88001F348A /* ColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorDefine.h; sourceTree = "<group>"; };
 		8A5A43011E791D88001F348A /* HttpDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpDefine.h; sourceTree = "<group>"; };
 		8A5A43021E792584001F348A /* SaveDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveDefine.h; sourceTree = "<group>"; };
+		8A7185521E83ABA000C93E14 /* DDEmitterLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDEmitterLayerViewController.h; sourceTree = "<group>"; };
+		8A7185531E83ABA000C93E14 /* DDEmitterLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDEmitterLayerViewController.m; sourceTree = "<group>"; };
+		8A7185561E83ADE500C93E14 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
+		8A7185571E83ADE500C93E14 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
+		8A7185591E83AE1A00C93E14 /* LDProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDProgressBar.h; sourceTree = "<group>"; };
+		8A71855A1E83AE1A00C93E14 /* LDProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDProgressBar.m; sourceTree = "<group>"; };
 		8AD49F251E7B7A1300768B56 /* DDCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCarouselView.h; sourceTree = "<group>"; };
 		8AD49F261E7B7A1300768B56 /* DDCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCarouselView.m; sourceTree = "<group>"; };
 		8AD49F281E7B7BDD00768B56 /* CommonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTableViewController.h; sourceTree = "<group>"; };
@@ -719,12 +728,10 @@
 				8A2066B01E766B07001D0D13 /* TestTableViewCell.xib */,
 				8A2066B31E766B60001D0D13 /* TestModel.h */,
 				8A2066B41E766B60001D0D13 /* TestModel.m */,
-				8A4450B71E7A3B8A0094CB0E /* CollectionViewController.h */,
-				8A4450B81E7A3B8A0094CB0E /* CollectionViewController.m */,
-				8AD49F281E7B7BDD00768B56 /* CommonTableViewController.h */,
-				8AD49F291E7B7BDD00768B56 /* CommonTableViewController.m */,
-				8AD49F2B1E7B7C0D00768B56 /* CommonTableViewCell.h */,
-				8AD49F2C1E7B7C0D00768B56 /* CommonTableViewCell.m */,
+				8A7185551E83AD7D00C93E14 /* 环形进度 */,
+				8A7185511E83AB6C00C93E14 /* 粒子效果 */,
+				8A71854F1E83AA9300C93E14 /* CollectionView */,
+				8A7185501E83AAB200C93E14 /* CommonTableView */,
 			);
 			name = "示例类";
 			path = testFile;
@@ -1476,6 +1483,46 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		8A71854F1E83AA9300C93E14 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				8A4450B71E7A3B8A0094CB0E /* CollectionViewController.h */,
+				8A4450B81E7A3B8A0094CB0E /* CollectionViewController.m */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
+		8A7185501E83AAB200C93E14 /* CommonTableView */ = {
+			isa = PBXGroup;
+			children = (
+				8AD49F281E7B7BDD00768B56 /* CommonTableViewController.h */,
+				8AD49F291E7B7BDD00768B56 /* CommonTableViewController.m */,
+				8AD49F2B1E7B7C0D00768B56 /* CommonTableViewCell.h */,
+				8AD49F2C1E7B7C0D00768B56 /* CommonTableViewCell.m */,
+			);
+			name = CommonTableView;
+			sourceTree = "<group>";
+		};
+		8A7185511E83AB6C00C93E14 /* 粒子效果 */ = {
+			isa = PBXGroup;
+			children = (
+				8A7185521E83ABA000C93E14 /* DDEmitterLayerViewController.h */,
+				8A7185531E83ABA000C93E14 /* DDEmitterLayerViewController.m */,
+			);
+			name = "粒子效果";
+			sourceTree = "<group>";
+		};
+		8A7185551E83AD7D00C93E14 /* 环形进度 */ = {
+			isa = PBXGroup;
+			children = (
+				8A7185561E83ADE500C93E14 /* ProgressViewController.h */,
+				8A7185571E83ADE500C93E14 /* ProgressViewController.m */,
+				8A7185591E83AE1A00C93E14 /* LDProgressBar.h */,
+				8A71855A1E83AE1A00C93E14 /* LDProgressBar.m */,
+			);
+			name = "环形进度";
+			sourceTree = "<group>";
+		};
 		8AD49F241E7B7A1300768B56 /* CarouselView(轻量级轮播) */ = {
 			isa = PBXGroup;
 			children = (
@@ -2037,6 +2084,7 @@
 				8A531E9F1E821C6F00EC42B6 /* NSString+JKXMLDictionary.m in Sources */,
 				8AF39F0F1E5199B40065F9F3 /* Helper.m in Sources */,
 				8AF39F151E519A350065F9F3 /* DDThirdViewController.m in Sources */,
+				8A7185581E83ADE500C93E14 /* ProgressViewController.m in Sources */,
 				8AD49F851E7BDF3200768B56 /* MLMSegmentHead.m in Sources */,
 				8A3E34D11E72520300A1C756 /* UIButton+WebCache.m in Sources */,
 				8A2066A41E764465001D0D13 /* MainTableViewCell.m in Sources */,
@@ -2074,6 +2122,7 @@
 				8A20670F1E769B73001D0D13 /* UIWebView+AFNetworking.m in Sources */,
 				8A2066DB1E7692A9001D0D13 /* NSObject+MJKeyValue.m in Sources */,
 				8A3E34C41E72520300A1C756 /* UIScrollView+MJRefresh.m in Sources */,
+				8A7185541E83ABA000C93E14 /* DDEmitterLayerViewController.m in Sources */,
 				8AD49F8C1E7BE01800768B56 /* DDOrderViewController.m in Sources */,
 				8A3E34B61E72520300A1C756 /* MJRefreshHeader.m in Sources */,
 				8A2067091E769B73001D0D13 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -2093,6 +2142,7 @@
 				8A3DCFEE1E810B7A00AE8702 /* ViewController+MASAdditions.m in Sources */,
 				8A2066AD1E766AE2001D0D13 /* TableTestViewController.m in Sources */,
 				8A20670B1E769B73001D0D13 /* UIButton+AFNetworking.m in Sources */,
+				8A71855B1E83AE1A00C93E14 /* LDProgressBar.m in Sources */,
 				8AF39D481E515E3A0065F9F3 /* KKNavigationController.m in Sources */,
 				8A531EE41E824B2600EC42B6 /* README.md in Sources */,
 				8A531E9C1E821C6F00EC42B6 /* NSString+JKNormalRegex.m in Sources */,

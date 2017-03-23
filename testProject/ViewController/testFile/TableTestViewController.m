@@ -11,6 +11,9 @@
 #import "TestModel.h"
 
 #import "CollectionViewController.h"
+#import "CommonTableViewController.h"
+#import "DDEmitterLayerViewController.h"
+#import "ProgressViewController.h"
 
 @interface TableTestViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -32,7 +35,7 @@ static NSString *identify = @"TestTableViewCell";
     
     [super viewDidLoad];
     self.view.backgroundColor = rgba(233, 233, 233, 1);
-    [self drawNavWithTitle:@"测试页动态cell高度"];
+    [self drawNavWithTitle:@"测试动态cell高度"];
     [self drawBackButton];
 
     [self configModel];
@@ -47,12 +50,12 @@ static NSString *identify = @"TestTableViewCell";
 #pragma - mark - 数据模型
 - (void)configModel
 {
-    NSArray *descArr = @[@"1\n我\n是一个\n名字",
-                         @"2\n这里\n可是显示任何文字信息,并且不做显示的\n全部显示",
-                         @"3\n也可以设置行数哈",
-                         @"4\n这样动态cell的高度就\n好多了",
-                         @"5\n建设\n社会主义新中国",
-                         @"6\n我\n是一个\n名字"];
+    NSArray *descArr = @[@"点我-进collectionView",
+                         @"点我-进tableview列表",
+                         @"点我-进粒子动画效果",
+                         @"点我-进环形进度",
+                         @"待定",
+                         @"待定"];
     
     for (NSInteger i = 0; i < descArr.count; i ++)
     {
@@ -60,6 +63,48 @@ static NSString *identify = @"TestTableViewCell";
         model.userName = descArr[i];
         [self.dataSource addObject:model];
     }
+}
+
+
+#pragma - mark - 点击cell
+#pragma - mark - 点击cell方法
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+        case 0:
+        {
+            CollectionViewController *chooseVC = [[CollectionViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 1:
+        {
+            CommonTableViewController *chooseVC = [[CommonTableViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 2:
+        {
+            DDEmitterLayerViewController *chooseVC = [[DDEmitterLayerViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 3:
+        {
+            ProgressViewController *chooseVC = [[ProgressViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 4:
+        {
+            CollectionViewController *chooseVC = [[CollectionViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
+    
 }
 
 
@@ -119,12 +164,6 @@ static NSString *identify = @"TestTableViewCell";
     cell.testLabel.text = model.userName;
     
 }
-#pragma - mark - 点击cell方法
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    CollectionViewController *chooseVC = [[CollectionViewController alloc]init];
-    [self.navigationController pushViewController:chooseVC animated:YES];
-}
 
 #pragma - mark - cell布局
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -158,6 +197,7 @@ static NSString *identify = @"TestTableViewCell";
             }];
     
 }
+
 
 #pragma - mark - tableview头部view
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section

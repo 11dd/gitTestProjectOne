@@ -26,7 +26,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = rgba(241, 241, 241, 1);
-    [self drawNavWithTitle:@"测试页Collection"];
+    [self drawNavWithTitle:@"测试Collection"];
     [self drawBackButton];
     
     [self drawViewCollectionView];
