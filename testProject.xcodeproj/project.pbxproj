@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A1E2E041E84F76F0086F3CE /* TestGuDongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E2E031E84F76F0086F3CE /* TestGuDongViewController.m */; };
+		8A1E2E071E84FB6E0086F3CE /* TestScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E2E061E84FB6E0086F3CE /* TestScrollView.m */; };
 		8A20669D1E763F56001D0D13 /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2066961E763F56001D0D13 /* UITableView+FDIndexPathHeightCache.m */; };
 		8A20669E1E763F56001D0D13 /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2066981E763F56001D0D13 /* UITableView+FDKeyedHeightCache.m */; };
 		8A20669F1E763F56001D0D13 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A20669A1E763F56001D0D13 /* UITableView+FDTemplateLayoutCell.m */; };
@@ -241,6 +243,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A1E2E021E84F76F0086F3CE /* TestGuDongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestGuDongViewController.h; sourceTree = "<group>"; };
+		8A1E2E031E84F76F0086F3CE /* TestGuDongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestGuDongViewController.m; sourceTree = "<group>"; };
+		8A1E2E051E84FB6E0086F3CE /* TestScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestScrollView.h; sourceTree = "<group>"; };
+		8A1E2E061E84FB6E0086F3CE /* TestScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestScrollView.m; sourceTree = "<group>"; };
 		8A2066951E763F56001D0D13 /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
 		8A2066961E763F56001D0D13 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
 		8A2066971E763F56001D0D13 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
@@ -708,6 +714,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A1E2E011E84F7570086F3CE /* testGuDong */ = {
+			isa = PBXGroup;
+			children = (
+				8A1E2E021E84F76F0086F3CE /* TestGuDongViewController.h */,
+				8A1E2E031E84F76F0086F3CE /* TestGuDongViewController.m */,
+				8A1E2E051E84FB6E0086F3CE /* TestScrollView.h */,
+				8A1E2E061E84FB6E0086F3CE /* TestScrollView.m */,
+			);
+			path = testGuDong;
+			sourceTree = "<group>";
+		};
 		8A2066941E763F56001D0D13 /* Classes动态cell计算高度 */ = {
 			isa = PBXGroup;
 			children = (
@@ -734,6 +751,7 @@
 				8A2066B01E766B07001D0D13 /* TestTableViewCell.xib */,
 				8A2066B31E766B60001D0D13 /* TestModel.h */,
 				8A2066B41E766B60001D0D13 /* TestModel.m */,
+				8A1E2E011E84F7570086F3CE /* testGuDong */,
 				8A7185601E83B9CC00C93E14 /* 动画效果 */,
 				8A71855F1E83B90E00C93E14 /* 可拖动按钮 */,
 				8A7185551E83AD7D00C93E14 /* 环形进度 */,
@@ -2009,6 +2027,7 @@
 				8A3E34D01E72520300A1C756 /* SDWebImagePrefetcher.m in Sources */,
 				8A3E34BA1E72520300A1C756 /* MJRefreshBackGifFooter.m in Sources */,
 				8A531EA41E821C6F00EC42B6 /* UIColor+JKGradient.m in Sources */,
+				8A1E2E071E84FB6E0086F3CE /* TestScrollView.m in Sources */,
 				8A3E34B31E72520300A1C756 /* MJRefreshBackFooter.m in Sources */,
 				8A3E34B51E72520300A1C756 /* MJRefreshFooter.m in Sources */,
 				8AD49F451E7BA4D500768B56 /* DDPictureListViewController.m in Sources */,
@@ -2023,6 +2042,7 @@
 				8AF39E1C1E517E190065F9F3 /* TAPageControl.m in Sources */,
 				8A31CD6F1E5141E200248C14 /* BaseViewController.m in Sources */,
 				8A531E9D1E821C6F00EC42B6 /* NSString+JKSize.m in Sources */,
+				8A1E2E041E84F76F0086F3CE /* TestGuDongViewController.m in Sources */,
 				8A3DCFEA1E810B7A00AE8702 /* MASViewConstraint.m in Sources */,
 				8AD49F981E7BED3D00768B56 /* SettingViewController.m in Sources */,
 				8A3E34D61E72520300A1C756 /* UIImageView+WebCache.m in Sources */,

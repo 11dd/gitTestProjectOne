@@ -16,7 +16,7 @@
 #import "ProgressViewController.h"
 #import "FloatingButtonViewController.h"
 #import "AnimationViewController.h"
-
+#import "TestGuDongViewController.h"
 
 @interface TableTestViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -58,7 +58,8 @@ static NSString *identify = @"TestTableViewCell";
                          @"点我-进粒子动画效果",
                          @"点我-进环形进度",
                          @"点我-进可拖动按钮",
-                         @"点我-进动画效果"];
+                         @"点我-进动画效果",
+                         @"点我-进咕咚运动切换效果"];
     
     for (NSInteger i = 0; i < descArr.count; i ++)
     {
@@ -107,6 +108,12 @@ static NSString *identify = @"TestTableViewCell";
         case 5:
         {
             AnimationViewController *chooseVC = [[AnimationViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 6:
+        {
+            TestGuDongViewController *chooseVC = [[TestGuDongViewController alloc]init];
             [self.navigationController pushViewController:chooseVC animated:YES];
         }
             break;

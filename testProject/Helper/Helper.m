@@ -100,11 +100,11 @@ UITabBarController *rootcontroller;
 {
     NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:tempStr];
     //颜色
-    [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0,num)];
+    [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0,num)];
     [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(num,tempStr.length-num)];
     //字体
-    [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:kh(14)] range:NSMakeRange(0,num)];
-    [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:kh(16)] range:NSMakeRange(num,tempStr.length-num)];
+    [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:kh(35)] range:NSMakeRange(0,num)];
+    [attrString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:kh(25)] range:NSMakeRange(num,tempStr.length-num)];
 
     
     return attrString;
