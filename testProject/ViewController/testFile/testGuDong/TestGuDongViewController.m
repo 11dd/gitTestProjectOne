@@ -13,6 +13,8 @@
 
 @property(nonatomic,strong)TestScrollView *DDView;
 
+@property(nonatomic,strong)UIView *bgView;
+
 @end
 
 @implementation TestGuDongViewController
@@ -30,10 +32,17 @@
     bgView.frame = CGRectMake(-KScreenWidth/2, KScreenHeight - KScreenWidth+100, KScreenWidth*2, KScreenWidth*2);
     bgView.backgroundColor = [UIColor lightGrayColor];
     bgView.layer.cornerRadius = KScreenWidth;
+    self.bgView = bgView;
     [self.view addSubview:bgView];
     
 }
 
-
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:YES];
+    
+    [self.bgView removeFromSuperview];
+    
+}
 
 @end
