@@ -110,10 +110,10 @@
 #define HOTSPOT_STATUSBAR_HEIGHT            20
 
 // 导航栏（UINavigationController.UINavigationBar）高度
-#define NAVIGATIONBAR_HEIGHT                44
+#define KNAVIGATIONBAR_HEIGHT                44
 
 // 标签栏（UITabBarController.UITabBar）高度
-#define TABBAR_HEIGHT                       48
+#define KTABBAR_HEIGHT                       48
 
 // APP_STATUSBAR_HEIGHT=SYS_STATUSBAR_HEIGHT+[HOTSPOT_STATUSBAR_HEIGHT]
 #define APP_STATUSBAR_HEIGHT                (CGRectGetHeight([UIApplication sharedApplication].statusBarFrame))
@@ -122,16 +122,16 @@
 #define IS_HOTSPOT_CONNECTED                (APP_STATUSBAR_HEIGHT==(SYS_STATUSBAR_HEIGHT+HOTSPOT_STATUSBAR_HEIGHT)?YES:NO)
 
 // 无热点栏时，标准系统状态栏高度+导航栏高度
-#define NOSTATUS_NAV_HEIGHT                 (SYS_STATUSBAR_HEIGHT+NAVIGATIONBAR_HEIGHT)
+#define NOSTATUS_NAV_HEIGHT                 (SYS_STATUSBAR_HEIGHT+KNAVIGATIONBAR_HEIGHT)
 
 // 实时系统状态栏高度+导航栏高度，如有热点栏，其高度包含在APP_STATUSBAR_HEIGHT中。
-#define STATUS_NAV_HEIGHT                   (APP_STATUSBAR_HEIGHT+NAVIGATIONBAR_HEIGHT)
+#define STATUS_NAV_HEIGHT                   (APP_STATUSBAR_HEIGHT+KNAVIGATIONBAR_HEIGHT)
 
 //TableView的高度,减去tabbar和nav的高度
-#define TableViewHomeHeight                 (KScreenHeight-APP_STATUSBAR_HEIGHT-NAVIGATIONBAR_HEIGHT-TABBAR_HEIGHT)
+#define TableViewHomeHeight                 (KScreenHeight-APP_STATUSBAR_HEIGHT-KNAVIGATIONBAR_HEIGHT-KTABBAR_HEIGHT)
 
 //TableView的高度,减去nav的高度
-#define TableViewHeight                     (KScreenHeight-APP_STATUSBAR_HEIGHT-NAVIGATIONBAR_HEIGHT)
+#define TableViewHeight                     (KScreenHeight-APP_STATUSBAR_HEIGHT-KNAVIGATIONBAR_HEIGHT)
 
 
 #endif /* testProject_pch */

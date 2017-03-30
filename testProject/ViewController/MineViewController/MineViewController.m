@@ -43,7 +43,7 @@
     //在做autoLayout之前 一定要先将view添加到superview上 否则会报错
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         //CGFloat top, CGFloat left, CGFloat bottom, CGFloat right
-        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(64, 0, TABBAR_HEIGHT, 0));
+        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(64, 0, KTABBAR_HEIGHT, 0));
     }];
 
 }

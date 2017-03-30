@@ -1,6 +1,0 @@
-framework module RJDevTools {
-  umbrella header "RJDevTools.h"
-
-  export *
-  module * { export * }
-}

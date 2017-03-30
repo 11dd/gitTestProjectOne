@@ -18,6 +18,9 @@
 #import "AnimationViewController.h"
 #import "TestGuDongViewController.h"
 #import "ModelSelectViewController.h"
+#import "DrawLineViewController.h"
+#import "HeartRateViewController.h"
+#import "FMViewController.h"
 
 @interface TableTestViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -61,7 +64,10 @@ static NSString *identify = @"TestTableViewCell";
                          @"点我-进可拖动按钮",
                          @"点我-进动画效果",
                          @"点我-进咕咚运动切换效果",
-                         @"点我-进栏目编辑页面"];
+                         @"点我-进栏目编辑页面",
+                         @"点我-进绘制波浪图形",
+                         @"点我-进心率测试",
+                         @"点我-进FMDB数据库测试"];
     
     for (NSInteger i = 0; i < descArr.count; i ++)
     {
@@ -125,6 +131,25 @@ static NSString *identify = @"TestTableViewCell";
             [self.navigationController pushViewController:chooseVC animated:YES];
         }
             break;
+        case 8:
+        {
+            DrawLineViewController *chooseVC = [[DrawLineViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 9:
+        {
+            HeartRateViewController *chooseVC = [[HeartRateViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 10:
+        {
+            FMViewController *chooseVC = [[FMViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+       
         default:
             break;
     }

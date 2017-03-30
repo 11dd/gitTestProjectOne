@@ -106,11 +106,11 @@
     
     if (statusBarRect.size.height == 40){
         
-        self.tabBar.frame = CGRectMake(0, KScreenHeight- TABBAR_HEIGHT -20, KScreenWidth, TABBAR_HEIGHT);
+        self.tabBar.frame = CGRectMake(0, KScreenHeight- KTABBAR_HEIGHT -20, KScreenWidth, KTABBAR_HEIGHT);
         
     }else{
         
-        self.tabBar.frame = CGRectMake(0, KScreenHeight- TABBAR_HEIGHT, KScreenWidth,TABBAR_HEIGHT);
+        self.tabBar.frame = CGRectMake(0, KScreenHeight- KTABBAR_HEIGHT, KScreenWidth,KTABBAR_HEIGHT);
 
     }
 
@@ -125,11 +125,11 @@
     
     if (statusBarRect.size.height == 40){
         
-        self.tabBar.frame = CGRectMake(0, KScreenHeight- TABBAR_HEIGHT -20, KScreenWidth, TABBAR_HEIGHT);
+        self.tabBar.frame = CGRectMake(0, KScreenHeight- KTABBAR_HEIGHT -20, KScreenWidth, KTABBAR_HEIGHT);
         
     }else{
         
-        self.tabBar.frame = CGRectMake(0, KScreenHeight- TABBAR_HEIGHT, KScreenWidth,TABBAR_HEIGHT);
+        self.tabBar.frame = CGRectMake(0, KScreenHeight- KTABBAR_HEIGHT, KScreenWidth,KTABBAR_HEIGHT);
         
     }
 }
@@ -142,11 +142,11 @@
     
     if (statusBarRect.size.height == 40){
         
-        self.tabBar.frame = CGRectMake(0, KScreenHeight- TABBAR_HEIGHT -20, KScreenWidth, TABBAR_HEIGHT);
+        self.tabBar.frame = CGRectMake(0, KScreenHeight- KTABBAR_HEIGHT -20, KScreenWidth, KTABBAR_HEIGHT);
         
     }else{
         
-        self.tabBar.frame = CGRectMake(0, KScreenHeight- TABBAR_HEIGHT, KScreenWidth,TABBAR_HEIGHT);
+        self.tabBar.frame = CGRectMake(0, KScreenHeight- KTABBAR_HEIGHT, KScreenWidth,KTABBAR_HEIGHT);
         
     }
 }
