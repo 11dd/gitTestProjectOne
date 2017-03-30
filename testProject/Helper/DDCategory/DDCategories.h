@@ -28,5 +28,12 @@
 #import "UIView+JKCustomBorder.h"
 #import "UIView+JKScreenshot.h"
 
+/****************************/
+
+#import "UIImageView+HYBImageCliped.h"
+#import "UIImage+HYBmageCliped.h"
+#import "UIView+HYBImageCliped.h"
+#import "UIButton+HYBImageCliped.h"
+#import "HYBImageClipedManager.h"
 
 #endif /* DDCategories_h */

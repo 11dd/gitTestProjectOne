@@ -24,9 +24,10 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = rgba(241, 241, 241, 1);
-    [self drawNavWithTitle:@"测试页tableview"];
+    [self drawNavWithTitle:@"测试tableview"];
     [self drawBackButton];
 
+    self.tempArray = [NSMutableArray arrayWithObjects:@"逗你玩",@"逗你玩",@"逗你玩",@"逗你玩",@"逗你玩",@"逗你玩",@"逗你玩", nil];
     [self.view addSubview:self.tableView];
 
 }
@@ -80,6 +81,7 @@
     CommonTableViewCell *cell = [CommonTableViewCell cellWithTableView:tableView];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
+    cell.textLabel.text = [self.tempArray objectAtIndex:indexPath.row];
     
     return cell;
 }

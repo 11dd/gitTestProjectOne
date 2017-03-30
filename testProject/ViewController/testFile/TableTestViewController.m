@@ -11,6 +11,16 @@
 #import "TestModel.h"
 
 #import "CollectionViewController.h"
+#import "CommonTableViewController.h"
+#import "DDEmitterLayerViewController.h"
+#import "ProgressViewController.h"
+#import "FloatingButtonViewController.h"
+#import "AnimationViewController.h"
+#import "TestGuDongViewController.h"
+#import "ModelSelectViewController.h"
+#import "DrawLineViewController.h"
+#import "HeartRateViewController.h"
+#import "FMViewController.h"
 
 @interface TableTestViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -32,7 +42,7 @@ static NSString *identify = @"TestTableViewCell";
     
     [super viewDidLoad];
     self.view.backgroundColor = rgba(233, 233, 233, 1);
-    [self drawNavWithTitle:@"测试页动态cell高度"];
+    [self drawNavWithTitle:@"测试动态cell高度"];
     [self drawBackButton];
 
     [self configModel];
@@ -47,12 +57,17 @@ static NSString *identify = @"TestTableViewCell";
 #pragma - mark - 数据模型
 - (void)configModel
 {
-    NSArray *descArr = @[@"1\n我\n是一个\n名字",
-                         @"2\n这里\n可是显示任何文字信息,并且不做显示的\n全部显示",
-                         @"3\n也可以设置行数哈",
-                         @"4\n这样动态cell的高度就\n好多了",
-                         @"5\n建设\n社会主义新中国",
-                         @"6\n我\n是一个\n名字"];
+    NSArray *descArr = @[@"点我-进collectionView",
+                         @"点我-进tableview列表",
+                         @"点我-进粒子动画效果",
+                         @"点我-进环形进度",
+                         @"点我-进可拖动按钮",
+                         @"点我-进动画效果",
+                         @"点我-进咕咚运动切换效果",
+                         @"点我-进栏目编辑页面",
+                         @"点我-进绘制波浪图形",
+                         @"点我-进心率测试",
+                         @"点我-进FMDB数据库测试"];
     
     for (NSInteger i = 0; i < descArr.count; i ++)
     {
@@ -60,6 +75,85 @@ static NSString *identify = @"TestTableViewCell";
         model.userName = descArr[i];
         [self.dataSource addObject:model];
     }
+}
+
+
+#pragma - mark - 点击cell
+#pragma - mark - 点击cell方法
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+        case 0:
+        {
+            CollectionViewController *chooseVC = [[CollectionViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 1:
+        {
+            CommonTableViewController *chooseVC = [[CommonTableViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 2:
+        {
+            DDEmitterLayerViewController *chooseVC = [[DDEmitterLayerViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 3:
+        {
+            ProgressViewController *chooseVC = [[ProgressViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 4:
+        {
+            FloatingButtonViewController *chooseVC = [[FloatingButtonViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 5:
+        {
+            AnimationViewController *chooseVC = [[AnimationViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 6:
+        {
+            TestGuDongViewController *chooseVC = [[TestGuDongViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 7:
+        {
+            ModelSelectViewController *chooseVC = [[ModelSelectViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 8:
+        {
+            DrawLineViewController *chooseVC = [[DrawLineViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 9:
+        {
+            HeartRateViewController *chooseVC = [[HeartRateViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 10:
+        {
+            FMViewController *chooseVC = [[FMViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+       
+        default:
+            break;
+    }
+    
 }
 
 
@@ -119,12 +213,6 @@ static NSString *identify = @"TestTableViewCell";
     cell.testLabel.text = model.userName;
     
 }
-#pragma - mark - 点击cell方法
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    CollectionViewController *chooseVC = [[CollectionViewController alloc]init];
-    [self.navigationController pushViewController:chooseVC animated:YES];
-}
 
 #pragma - mark - cell布局
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -159,6 +247,7 @@ static NSString *identify = @"TestTableViewCell";
     
 }
 
+
 #pragma - mark - tableview头部view
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -170,7 +259,7 @@ static NSString *identify = @"TestTableViewCell";
 #pragma - mark - tableview头部高度
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return kh(200);
+    return kh(20);
 }
 
 #pragma - mark - tableview尾部view
