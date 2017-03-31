@@ -24,6 +24,8 @@
 #import "FSTextView.h"
 #import "LoginViewController.h"
 
+#import "MBProgressHUD.h"
+
 #ifdef DEBUG
 
 #define DLLog(...) NSLog(__VA_ARGS__)
@@ -38,6 +40,9 @@
 
 #define KScreenWidth [UIScreen mainScreen].bounds.size.width
 #define KScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 #define kw(R)               (R) * (KScreenWidth) / 320.0
 #define kh(R)               (R) * (KScreenHeight) / 568.0

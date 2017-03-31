@@ -6,10 +6,10 @@
 //  Copyright © 2017年 admin. All rights reserved.
 //
 
-#import "CollectionViewController.h"
+#import "DDCollectionViewController.h"
 
 
-@interface CollectionViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface DDCollectionViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 {
     
     UICollectionView *_collectionView;
@@ -20,7 +20,7 @@
 @end
 //测试示例,CollectionView
 
-@implementation CollectionViewController
+@implementation DDCollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

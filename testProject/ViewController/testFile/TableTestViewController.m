@@ -21,6 +21,8 @@
 #import "DrawLineViewController.h"
 #import "HeartRateViewController.h"
 #import "FMViewController.h"
+#import "CollectionViewController.h"
+#import "WeiBoHomeViewController.h"
 
 @interface TableTestViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -67,7 +69,9 @@ static NSString *identify = @"TestTableViewCell";
                          @"点我-进栏目编辑页面",
                          @"点我-进绘制波浪图形",
                          @"点我-进心率测试",
-                         @"点我-进FMDB数据库测试"];
+                         @"点我-进FMDB数据库测试",
+                         @"点我-进联动测试",
+                         @"点我-进weibo测试"];
     
     for (NSInteger i = 0; i < descArr.count; i ++)
     {
@@ -149,7 +153,18 @@ static NSString *identify = @"TestTableViewCell";
             [self.navigationController pushViewController:chooseVC animated:YES];
         }
             break;
-       
+        case 11:
+        {
+            CollectionViewController *chooseVC = [[CollectionViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
+        case 12:
+        {
+            WeiBoHomeViewController *chooseVC = [[WeiBoHomeViewController alloc]init];
+            [self.navigationController pushViewController:chooseVC animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -178,27 +193,27 @@ static NSString *identify = @"TestTableViewCell";
         footView.backgroundColor = rgba(241, 241, 241, 1);;
         _tempTableView.tableFooterView = footView;
         
-        //以下是刷新方法
-        __unsafe_unretained UITableView *tableView = _tempTableView;
-        
-        // 下拉刷新
-        tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-            // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [tableView.mj_header endRefreshing];
-            });
-        }];
-        
-        // 设置自动切换透明度(在导航栏下面自动隐藏)
-        tableView.mj_header.automaticallyChangeAlpha = YES;
-        
-        // 上拉刷新
-        tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-            // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [tableView.mj_footer endRefreshing];
-            });
-        }];
+//        //以下是刷新方法
+//        __unsafe_unretained UITableView *tableView = _tempTableView;
+//        
+//        // 下拉刷新
+//        tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//            // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                [tableView.mj_header endRefreshing];
+//            });
+//        }];
+//        
+//        // 设置自动切换透明度(在导航栏下面自动隐藏)
+//        tableView.mj_header.automaticallyChangeAlpha = YES;
+//        
+//        // 上拉刷新
+//        tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+//            // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                [tableView.mj_footer endRefreshing];
+//            });
+//        }];
 
         
     }

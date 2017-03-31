@@ -13,7 +13,7 @@
 #import "FourthViewController.h"
 #import "MineViewController.h"
 
-#import "TableTestViewController.h"
+#import "WeiBoHomeViewController.h"
 
 
 @interface CustomTabbarViewController ()<UITabBarControllerDelegate>
@@ -38,16 +38,24 @@
 {
     
     MainViewController *mainVC = [[MainViewController alloc]init];
-    DDSecondViewController *secondVC = [[DDSecondViewController alloc]init];
+    
+    //DDSecondViewController *secondVC = [[DDSecondViewController alloc]init];
+    
+    WeiBoHomeViewController *secondVC = [[WeiBoHomeViewController alloc]init];
+    
     DDThirdViewController *ThirdVC = [[DDThirdViewController alloc]init];
+    
     FourthViewController *FourthVC = [[FourthViewController alloc]init];
+    
     MineViewController *mineVC = [[MineViewController alloc]init];
+    
     [self addChild:mainVC image:@"Image-1" imageSele:@"Image-2" title:@"首页"];
     [self addChild:secondVC image:@"Image-3" imageSele:@"Image-4" title:@"第二"];
     [self addChild:ThirdVC image:@"Image-5" imageSele:@"Image-6" title:@"第三"];
     [self addChild:FourthVC image:@"Image-7" imageSele:@"Image-8" title:@"第四"];
     [self addChild:mineVC image:@"Image-9" imageSele:@"Image" title:@"我的"];
-    self.selectedIndex=0;
+    
+    self.selectedIndex=1;
     
 }
 
