@@ -52,13 +52,14 @@
                                        -- https://github.com/forkingdog/UITableView-FDTemplateLayoutCell  
 优化UITableViewCell高度计算的那些事地址  -- http://blog.sunnyxx.com/2015/05/17/cell-height-calculation/  
 
-*DDCarouselView                     --添加轮播  
-*OrderPay                           --(支付工具合集)查看该类,集成苹果支付,支付宝,微信支付,银联支付  
-*DDSegmentPageView                  --(分页)查看SegmentPageHead.h可查看使用示例  
-*NullSafe.m                         --加在程序中,解决NUll问题  
-*SingleTon.h                        --宏定义单例,使用示例:查看DDSingleData.h与DDSingleData.m 直接创建出单例  
+已添加如下功能:  
+--添加轮播  
+--(支付工具合集)查看该类,集成苹果支付,支付宝,微信支付,银联支付  
+--(分页)查看SegmentPageHead.h可查看使用示例  
+--加在程序中,解决NUll问题  
+--宏定义单例,使用示例:查看DDSingleData.h与DDSingleData.m 直接创建出单例  
 
-**Helper.h                          --工具帮助类,将常用方法写在这里方便调用  
+**Helper.h --工具帮助类,将常用方法写在这里方便调用  
 
 /*****************(三)常用宏合集提示*******************/  
 
@@ -84,7 +85,7 @@
 #define KScreenWidth [UIScreen mainScreen].bounds.size.width  
 #define KScreenHeight [UIScreen mainScreen].bounds.size.height  
 
-//适配可能很多人还习惯性的frame比例  
+//适配可能很多人还习惯性的frame比例,但是不要计算的所有的坐标都加上比例真的很丑,看了几个这样的项目    
 #define kw(R)               (R) * (KScreenWidth) / 320.0  
 #define kh(R)               (R) * (KScreenHeight) / 568.0  
 
