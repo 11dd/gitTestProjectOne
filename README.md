@@ -37,7 +37,8 @@
 
 /*****************(一)常用的第三方库*******************/  
 
-*集成了个推GtSdk  
+*集成了个推GtSdk  但是不建议用个推,这个平台推送证书只能上传一个,一个测试证书或者一个生产证书;  
+我个人一向喜欢系统源生的东西;  
 *AFNetWorking     --网络请求--                     https://github.com/AFNetworking/AFNetworking  
 *MJRefresh        --刷新--                         https://github.com/CoderMJLee/MJRefresh  
 *MJExtension      --字典模型转换工具--              https://github.com/CoderMJLee/MJExtension  
