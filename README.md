@@ -147,7 +147,7 @@
 
 //以下为类别各功能,全集请查看该git地址:https://github.com/shaojiankui/JKCategories  
 
-1.UIButton+JKImagePosition   -- 用button的titleEdgeInsets和 imageEdgeInsets属性来实现button文字图片上下或者左右排列的  
+1.UIButton+JKImagePosition   -- 实现button文字图片上下或者左右排列的  
 2.UIView+JKScreenshot        -- 截图方法  
 3.NSString+JKNormalRegex     -- 判断手机邮箱身份证等各种证件的有效性  
 4.NSString+JKSize            -- 计算宽高  
@@ -155,7 +155,6 @@
 6.  
 NSDate+JKExtension  
 NSDate+JKUtilities           -- 时间处理  
-
 7.UIColor+JKGradient         -- 渐变色  
 8.UIDevice+JKHardware        -- 硬件信息  
 
@@ -181,6 +180,5 @@ NSDate+JKUtilities           -- 时间处理
 
      //当出错时统一打印错误信息,无需再此打印报错信息  
     }];  
-
-*/  
+ 
 
