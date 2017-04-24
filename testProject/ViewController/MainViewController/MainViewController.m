@@ -35,6 +35,7 @@ static NSString *identify = @"MainTableViewCell";
 
     [self test];//进入示例类
     
+    
     [self.view addSubview:self.tempTableView];
     [self.tempTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         //CGFloat top, CGFloat left, CGFloat bottom, CGFloat right

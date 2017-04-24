@@ -39,9 +39,9 @@
     
     MainViewController *mainVC = [[MainViewController alloc]init];
     
-    //DDSecondViewController *secondVC = [[DDSecondViewController alloc]init];
+    DDSecondViewController *secondVC = [[DDSecondViewController alloc]init];
     
-    WeiBoHomeViewController *secondVC = [[WeiBoHomeViewController alloc]init];
+    //WeiBoHomeViewController *secondVC = [[WeiBoHomeViewController alloc]init];
     
     DDThirdViewController *ThirdVC = [[DDThirdViewController alloc]init];
     

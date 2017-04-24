@@ -44,10 +44,10 @@
     
 
     NSMutableDictionary * dic = [NSMutableDictionary dictionary];;
-    dic[@"access_token"] = @"";
-    dic[@"expires_in"] = @"";
-    dic[@"remind_in"] = @"";
-    dic[@"uid"] = @"";
+    dic[@"access_token"] = @"2.00JjWKaC0H7CVc49d2fe11090AvaCc";
+    dic[@"expires_in"] = @"2638468";
+    dic[@"remind_in"] = @"2638468";
+    dic[@"uid"] = @"2366722847";
     
     // 将返回的账号字典数据 --> 模型，存进沙盒
     XFAccount *account = [XFAccount accountWithDict:dic];
