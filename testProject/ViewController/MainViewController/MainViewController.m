@@ -12,6 +12,8 @@
 #import "MainModel.h"
 #import "DDCarouselView.h"
 
+
+
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource,DDCarouselViewDelegate>
 
 @property(nonatomic, strong)UITableView * tempTableView;
