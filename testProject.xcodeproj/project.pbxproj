@@ -90,8 +90,6 @@
 		8A531EEA1E824B2600EC42B6 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8A531EDC1E824B2600EC42B6 /* README.md */; };
 		8A5A42E41E78F47E001F348A /* NetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A42E31E78F47E001F348A /* NetworkTool.m */; };
 		8A5A42F11E7911A2001F348A /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A42F01E7911A2001F348A /* NullSafe.m */; };
-		8A5A42FE1E7915D1001F348A /* libGeTuiSdk-1.6.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5A42FC1E7915D1001F348A /* libGeTuiSdk-1.6.2.0.a */; };
-		8A5A42FF1E7915D1001F348A /* libGtExtensionSdk-1.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5A42FD1E7915D1001F348A /* libGtExtensionSdk-1.1.0.a */; };
 		8A7185541E83ABA000C93E14 /* DDEmitterLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7185531E83ABA000C93E14 /* DDEmitterLayerViewController.m */; };
 		8A7185581E83ADE500C93E14 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7185571E83ADE500C93E14 /* ProgressViewController.m */; };
 		8A71855B1E83AE1A00C93E14 /* LDProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A71855A1E83AE1A00C93E14 /* LDProgressBar.m */; };
@@ -343,8 +341,6 @@
 		8A31CD661E51412D00248C14 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8A31CD6D1E5141E200248C14 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		8A31CD6E1E5141E200248C14 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		8A3E34541E72520300A1C756 /* GeTuiExtSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiExtSdk.h; sourceTree = "<group>"; };
-		8A3E34551E72520300A1C756 /* GeTuiSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeTuiSdk.h; sourceTree = "<group>"; };
 		8A3E34D91E72523800A1C756 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8A3E34DB1E72524400A1C756 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		8A3E34DD1E72527000A1C756 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -416,8 +412,6 @@
 		8A5A42E21E78F47E001F348A /* NetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTool.h; sourceTree = "<group>"; };
 		8A5A42E31E78F47E001F348A /* NetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTool.m; sourceTree = "<group>"; };
 		8A5A42F01E7911A2001F348A /* NullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullSafe.m; sourceTree = "<group>"; };
-		8A5A42FC1E7915D1001F348A /* libGeTuiSdk-1.6.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGeTuiSdk-1.6.2.0.a"; sourceTree = "<group>"; };
-		8A5A42FD1E7915D1001F348A /* libGtExtensionSdk-1.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libGtExtensionSdk-1.1.0.a"; sourceTree = "<group>"; };
 		8A5A43001E791D88001F348A /* ColorDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorDefine.h; sourceTree = "<group>"; };
 		8A5A43011E791D88001F348A /* HttpDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpDefine.h; sourceTree = "<group>"; };
 		8A5A43021E792584001F348A /* SaveDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveDefine.h; sourceTree = "<group>"; };
@@ -752,12 +746,10 @@
 				8A3E34DC1E72524400A1C756 /* ImageIO.framework in Frameworks */,
 				8A2066B71E76811B001D0D13 /* libxml2.tbd in Frameworks */,
 				8A3E34DA1E72523800A1C756 /* MapKit.framework in Frameworks */,
-				8A5A42FE1E7915D1001F348A /* libGeTuiSdk-1.6.2.0.a in Frameworks */,
 				8AF39E481E5180FB0065F9F3 /* Foundation.framework in Frameworks */,
 				8AF39E461E5180D70065F9F3 /* UIKit.framework in Frameworks */,
 				8A531EE71E824B2600EC42B6 /* libPaymentControl.a in Frameworks */,
 				8AF39E581E5181D60065F9F3 /* CoreTelephony.framework in Frameworks */,
-				8A5A42FF1E7915D1001F348A /* libGtExtensionSdk-1.1.0.a in Frameworks */,
 				8AF39E561E5181CC0065F9F3 /* CoreText.framework in Frameworks */,
 				8A531EDE1E824B2600EC42B6 /* AlipaySDK.framework in Frameworks */,
 				8AF39E541E5181C30065F9F3 /* CoreGraphics.framework in Frameworks */,
@@ -1090,7 +1082,6 @@
 		8A3E34391E72382B00A1C756 /* Lib(三方框架库) */ = {
 			isa = PBXGroup;
 			children = (
-				8A3E34531E72520300A1C756 /* GtSdkLib */,
 				8A7400D91E8CB6D900C9EDEF /* fmdb */,
 				8A2066BC1E7692A9001D0D13 /* MJExtension */,
 				8AD49F461E7BB0A800768B56 /* GTMBase64 */,
@@ -1098,17 +1089,6 @@
 			);
 			name = "Lib(三方框架库)";
 			path = Lib;
-			sourceTree = "<group>";
-		};
-		8A3E34531E72520300A1C756 /* GtSdkLib */ = {
-			isa = PBXGroup;
-			children = (
-				8A5A42FC1E7915D1001F348A /* libGeTuiSdk-1.6.2.0.a */,
-				8A5A42FD1E7915D1001F348A /* libGtExtensionSdk-1.1.0.a */,
-				8A3E34541E72520300A1C756 /* GeTuiExtSdk.h */,
-				8A3E34551E72520300A1C756 /* GeTuiSdk.h */,
-			);
-			path = GtSdkLib;
 			sourceTree = "<group>";
 		};
 		8A531E751E821C6F00EC42B6 /* DDCategory(拓展类) */ = {
@@ -2794,9 +2774,10 @@
 					"$(PROJECT_DIR)/testProject/Tools/OrderPay/UnionPay_SDK_iOS/UnionPay",
 					"$(PROJECT_DIR)/testProject/Tools/OrderPay/WeChat_SDK_iOS/OpenSDK",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruijin.testProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -2826,9 +2807,10 @@
 					"$(PROJECT_DIR)/testProject/Tools/OrderPay/UnionPay_SDK_iOS/UnionPay",
 					"$(PROJECT_DIR)/testProject/Tools/OrderPay/WeChat_SDK_iOS/OpenSDK",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruijin.testProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};
