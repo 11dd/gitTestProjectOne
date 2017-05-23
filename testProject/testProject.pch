@@ -38,7 +38,6 @@
 
 #define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
-
 #define KScreenWidth [UIScreen mainScreen].bounds.size.width
 #define KScreenHeight [UIScreen mainScreen].bounds.size.height
 
@@ -51,10 +50,8 @@
 #define kFont(F)            [UIFont systemFontOfSize:((F) * (KScreenWidth) / 320)]
 #define kBoldFont(F)        [UIFont fontWithName:@"Helvetica-Bold" size:((F) * (KScreenWidth) / 320)]
 
-/** 时间戳 */
-#define KtimeSign [MLString(@"%.f",(double)([[NSDate date] timeIntervalSince1970]*1000)) doubleValue]
 
-//加载png图片
+//加载较大的png图片
 # define Kimage(imageName)  [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:imageName ofType:@"png"]]
 
 //转换字符串
@@ -67,6 +64,7 @@
 #define Kuserread(key) [[NSUserDefaults standardUserDefaults] objectForKey:key]
 //删除NSUserDefaults中key的元素
 #define Kuserdelete(key) [[NSUserDefaults standardUserDefaults] removeObjectForKey:key]
+
 
 //获取temp
 #define kPathTemp NSTemporaryDirectory()
@@ -92,9 +90,11 @@
 || ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
 || ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
 
+
 #define kWeakSelf              __weak __typeof(self)weakSelf = self;
 #define KcreateMuDic          [[NSMutableDictionary alloc]init]
 #define kcreateMuArry         [[NSMutableArray alloc]init]
+
 //请求接口返回的字段
 #define Kcontent              [retDic objectForKey:@"msg"]
 #define Kresult               [retDic objectForKey:@"status"]
@@ -102,22 +102,22 @@
 
 
 //设置 view 圆角和边框
-#define KYJViewBorderRadius(View, Radius, Width, Color)\
+#define KViewBorderRadius(View, Radius, Width, Color)\
 [View.layer setCornerRadius:(Radius)];\
 [View.layer setMasksToBounds:YES];\
 [View.layer setBorderWidth:(Width)];\
 [View.layer setBorderColor:[Color CGColor]]
 
 
-//设置 lable 常用属性（适用全局）
-#define kLabsetup(lab,textcolor,textfont,backgroundcolor,ttAlignment)\
-lab.textColor=textcolor;\
-lab.font=textfont;\
-lab.textAlignment=ttAlignment;\
-lab.backgroundColor=backgroundcolor;
+//设置 lable 常用属性
+#define kLabSetup(lab,textcolor,textfont,backgroundcolor,ttAlignment)\
+lab.textColor       = textcolor;\
+lab.font            = textfont;\
+lab.textAlignment   = ttAlignment;\
+lab.backgroundColor = backgroundcolor;
 
 //设置 button 常用属性
-#define kBtusetup(btu,title,textcolor,textfont,backcolor,imgstr)\
+#define kButtonSetup(btu,title,textcolor,textfont,backcolor,imgstr)\
 [btu setTitle:title forState:UIControlStateNormal];\
 [btu setTitleColor:textcolor forState:UIControlStateNormal];\
 btu.titleLabel.font = textfont;\
@@ -125,13 +125,13 @@ btu.titleLabel.font = textfont;\
 [btu setImage:[UIImage imageNamed:imgstr] forState:UIControlStateNormal];
 
 //设置 textfield 常用属性
-#define kTfsetup(tf,clearmode,keyboard,phtext,textcolor,textfont,backgroundcolor)\
-tf.clearButtonMode=clearmode;\
-tf.keyboardType=keyboard;\
-tf.placeholder=phtext;\
-tf.textColor=textcolor;\
-tf.font=textfont;\
-tf.backgroundColor=backgroundcolor;
+#define kTextFieldSetup(textField,clearmode,keyboard,phtext,textcolor,textfont,backgroundcolor)\
+textField.clearButtonMode=clearmode;\
+textField.keyboardType=keyboard;\
+textField.placeholder=phtext;\
+textField.textColor=textcolor;\
+textField.font=textfont;\
+textField.backgroundColor=backgroundcolor;
 
 /***************热点问题******************/
 
