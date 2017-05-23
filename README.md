@@ -12,12 +12,18 @@ testProject
 
 (一)常用的第三方库  
 
-*AFNetWorking     --网络请求--                     https://github.com/AFNetworking/AFNetworking  
-*MJRefresh        --刷新--                         https://github.com/CoderMJLee/MJRefresh  
-*SDWebImage       --图片加载--                     https://github.com/rs/SDWebImage  
-*IQKeyBoardManager--用于解决输入框被键盘遮挡的问题-- https://github.com/hackiftekhar/IQKeyboardManager  
-*Masonry             --用于布局约束--              https://github.com/SnapKit/Masonry  
-*MBProgressHUD    --用于加载的loading和类似Android的toast提示框--     https://github.com/jdg/MBProgressHUD  
+*AFNetWorking     --网络请求--  
+https://github.com/AFNetworking/AFNetworking  
+*MJRefresh        --刷新--   
+https://github.com/CoderMJLee/MJRefresh  
+*SDWebImage       --图片加载--  
+https://github.com/rs/SDWebImage  
+*IQKeyBoardManager--用于解决输入框被键盘遮挡的问题--  
+https://github.com/hackiftekhar/IQKeyboardManager  
+*Masonry             --用于布局约束--  
+https://github.com/SnapKit/Masonry   
+*MBProgressHUD    --用于加载的loading和类似Android的toast提示框--  
+https://github.com/jdg/MBProgressHUD  
 
 (二)我是第二梯队
 已添加如下功能:  
@@ -35,6 +41,8 @@ http://www.jianshu.com/p/dbd260b3eb8c
 
 (四)常用方法合集提示,  
 
+***还有很多扩展类,程序里查看吧  
+
 1.//显示loading加载中  
 [Helper showLoadingWithView:self.view];  
 //隐藏loading
@@ -45,8 +53,6 @@ http://www.jianshu.com/p/dbd260b3eb8c
 
 3.//解决键盘遮挡住输入框的问题  
 [Helper setKeyboardManagerEnable:YES];  
-
-***还有很多扩展类,程序里查看吧
 
 /*请求示例:这里都是使用post请求*/  
 
