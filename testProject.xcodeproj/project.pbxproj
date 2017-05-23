@@ -2464,6 +2464,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/testProject/Lib",
 					"$(PROJECT_DIR)/testProject/Tools/OrderPay/Alipay_SDK_iOS/Alipay",
+					"$(PROJECT_DIR)/testProject/Tools/ShareSDK",
+					"$(PROJECT_DIR)/testProject/Tools/ShareSDK/Support/Optional",
+					"$(PROJECT_DIR)/testProject/Tools/ShareSDK/Support/PlatformConnector",
+					"$(PROJECT_DIR)/testProject/Tools/ShareSDK/Support/PlatformSDK/QQSDK",
+					"$(PROJECT_DIR)/testProject/Tools/ShareSDK/Support/Required",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/testProject/testProject.pch";
@@ -2477,6 +2482,8 @@
 					"$(PROJECT_DIR)/testProject/Tools/OrderPay/ApplePay_SDK/ApplePay",
 					"$(PROJECT_DIR)/testProject/Tools/OrderPay/UnionPay_SDK_iOS/UnionPay",
 					"$(PROJECT_DIR)/testProject/Tools/OrderPay/WeChat_SDK_iOS/OpenSDK",
+					"$(PROJECT_DIR)/testProject/Tools/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
+					"$(PROJECT_DIR)/testProject/Tools/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruijin.testProject;
@@ -2497,6 +2504,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/testProject/Lib",
 					"$(PROJECT_DIR)/testProject/Tools/OrderPay/Alipay_SDK_iOS/Alipay",
+					"$(PROJECT_DIR)/testProject/Tools/ShareSDK",
+					"$(PROJECT_DIR)/testProject/Tools/ShareSDK/Support/Optional",
+					"$(PROJECT_DIR)/testProject/Tools/ShareSDK/Support/PlatformConnector",
+					"$(PROJECT_DIR)/testProject/Tools/ShareSDK/Support/PlatformSDK/QQSDK",
+					"$(PROJECT_DIR)/testProject/Tools/ShareSDK/Support/Required",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/testProject/testProject.pch";
@@ -2510,6 +2522,8 @@
 					"$(PROJECT_DIR)/testProject/Tools/OrderPay/ApplePay_SDK/ApplePay",
 					"$(PROJECT_DIR)/testProject/Tools/OrderPay/UnionPay_SDK_iOS/UnionPay",
 					"$(PROJECT_DIR)/testProject/Tools/OrderPay/WeChat_SDK_iOS/OpenSDK",
+					"$(PROJECT_DIR)/testProject/Tools/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
+					"$(PROJECT_DIR)/testProject/Tools/ShareSDK/Support/PlatformSDK/WeChatSDK",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruijin.testProject;
