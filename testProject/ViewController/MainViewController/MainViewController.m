@@ -10,11 +10,9 @@
 #import "MainViewController.h"
 #import "MainTableViewCell.h"
 #import "MainModel.h"
-#import "DDCarouselView.h"
 
 
-
-@interface MainViewController ()<UITableViewDelegate,UITableViewDataSource,DDCarouselViewDelegate>
+@interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic, strong)UITableView * tempTableView;
 
@@ -27,7 +25,6 @@
 static NSString *identify = @"MainTableViewCell";
 
 @implementation MainViewController
-
 
 - (void)viewDidLoad {
     
@@ -168,11 +165,7 @@ static NSString *identify = @"MainTableViewCell";
 //实际计算高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    return [tableView fd_heightForCellWithIdentifier:identify cacheByIndexPath:indexPath configuration:^(MainTableViewCell *cell)
-                {
-                    [self configCell:cell indexpath:indexPath];
-                }];
-
+    return 120;
 }
 
 //行数
@@ -214,21 +207,6 @@ static NSString *identify = @"MainTableViewCell";
 {
     UIView * view = [[UIView alloc]init];
 
-        DDCarouselView *carousel = [[DDCarouselView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kh(200))];
-        carousel.delegate = self;
-        //carousel.scrollDorectionPortrait = YES;//横向还是竖向;
-        carousel.images = @[
-                            [UIImage imageNamed:@"test0"],
-                            [UIImage imageNamed:@"test1"],
-                            [UIImage imageNamed:@"test2"],
-                            [UIImage imageNamed:@"test3"],
-                            [UIImage imageNamed:@"test4"]
-                            ];
-        carousel.currentPageColor = [UIColor orangeColor];
-        carousel.pageColor = [UIColor grayColor];
-        
-    [view addSubview:carousel];
-
     return view;
 }
 
@@ -237,13 +215,6 @@ static NSString *identify = @"MainTableViewCell";
   
     return kh(200);
 }
-
-#pragma - mark - 轮播图点击方法
-
-- (void)carouselView:(DDCarouselView *)carouselView indexOfClickedImageBtn:(NSUInteger )index {
-    NSLog(@"点击了第%ld张图片",index);
-}
-
 
 //数据源
 -(NSMutableArray *)dataSource

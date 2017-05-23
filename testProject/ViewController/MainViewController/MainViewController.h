@@ -7,7 +7,6 @@
 //
 
 #import "BaseViewController.h"
-#import "UITableView+FDTemplateLayoutCell.h"
 
 @interface MainViewController : BaseViewController
 

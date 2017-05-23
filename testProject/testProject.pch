@@ -13,18 +13,18 @@
 #import "SaveDefine.h"
 
 #import "UIImageView+WebCache.h"
-#import "NetworkTool.h"
+#import "MBProgressHUD.h"
+
 #import "MJExtension.h"
 #import "MJRefresh.h"
-#import "Masonry.h"
 
-#import "DDCategories.h"
+#import "Masonry.h"
+#import "FSTextView.h"
 
 #import "Helper.h"
-#import "FSTextView.h"
+#import "NetworkTool.h"
 #import "LoginViewController.h"
 
-#import "MBProgressHUD.h"
 
 #ifdef DEBUG
 
@@ -38,6 +38,7 @@
 
 #define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
+
 #define KScreenWidth [UIScreen mainScreen].bounds.size.width
 #define KScreenHeight [UIScreen mainScreen].bounds.size.height
 
@@ -48,7 +49,16 @@
 #define kh(R)               (R) * (KScreenHeight) / 568.0
 
 #define kFont(F)            [UIFont systemFontOfSize:((F) * (KScreenWidth) / 320)]
-#define ktextFont(F)        [UIFont fontWithName:@"Helvetica-Bold" size:((F) * (KScreenWidth) / 320)]
+#define kBoldFont(F)        [UIFont fontWithName:@"Helvetica-Bold" size:((F) * (KScreenWidth) / 320)]
+
+/** 时间戳 */
+#define KtimeSign [MLString(@"%.f",(double)([[NSDate date] timeIntervalSince1970]*1000)) doubleValue]
+
+//加载png图片
+# define Kimage(imageName)  [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:imageName ofType:@"png"]]
+
+//转换字符串
+#define KCHANGE_STR(string)     [[NSString alloc]initWithFormat:@"%@",string]
 
 
 //为NSUserDefaults 添加object和key
@@ -64,6 +74,7 @@
 #define kPathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
 //获取沙盒 Cache
 #define kPathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
 
 /****************判空****************/
 //字符串是否为空
@@ -81,6 +92,14 @@
 || ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
 || ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
 
+#define kWeakSelf              __weak __typeof(self)weakSelf = self;
+#define KcreateMuDic          [[NSMutableDictionary alloc]init]
+#define kcreateMuArry         [[NSMutableArray alloc]init]
+//请求接口返回的字段
+#define Kcontent              [retDic objectForKey:@"msg"]
+#define Kresult               [retDic objectForKey:@"status"]
+#define Kinfo                 [retDic objectForKey:@"info"]
+
 
 //设置 view 圆角和边框
 #define KYJViewBorderRadius(View, Radius, Width, Color)\
@@ -89,21 +108,30 @@
 [View.layer setBorderWidth:(Width)];\
 [View.layer setBorderColor:[Color CGColor]]
 
-/** 时间戳 */
-#define KtimeSign [MLString(@"%.f",(double)([[NSDate date] timeIntervalSince1970]*1000)) doubleValue]
-//加载png图片
-# define Kimage(imageName)  [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:imageName ofType:@"png"]]
-//转换字符串
-#define KCHANGE_STR(string)     [[NSString alloc]initWithFormat:@"%@",string]
 
+//设置 lable 常用属性（适用全局）
+#define kLabsetup(lab,textcolor,textfont,backgroundcolor,ttAlignment)\
+lab.textColor=textcolor;\
+lab.font=textfont;\
+lab.textAlignment=ttAlignment;\
+lab.backgroundColor=backgroundcolor;
 
+//设置 button 常用属性
+#define kBtusetup(btu,title,textcolor,textfont,backcolor,imgstr)\
+[btu setTitle:title forState:UIControlStateNormal];\
+[btu setTitleColor:textcolor forState:UIControlStateNormal];\
+btu.titleLabel.font = textfont;\
+[btu setBackgroundColor:backcolor];\
+[btu setImage:[UIImage imageNamed:imgstr] forState:UIControlStateNormal];
 
-#define KcreateMuDic          [[NSMutableDictionary alloc]init]
-#define kcreateMuArry         [[NSMutableArray alloc]init]
-#define Kcontent              [retDic objectForKey:@"msg"]
-#define Kresult               [retDic objectForKey:@"status"]
-#define Kinfo                 [retDic objectForKey:@"info"]
-#define kWeakSelf              __weak __typeof(self)weakSelf = self;
+//设置 textfield 常用属性
+#define kTfsetup(tf,clearmode,keyboard,phtext,textcolor,textfont,backgroundcolor)\
+tf.clearButtonMode=clearmode;\
+tf.keyboardType=keyboard;\
+tf.placeholder=phtext;\
+tf.textColor=textcolor;\
+tf.font=textfont;\
+tf.backgroundColor=backgroundcolor;
 
 /***************热点问题******************/
 

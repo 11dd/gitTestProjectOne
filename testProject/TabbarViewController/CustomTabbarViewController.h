@@ -10,5 +10,10 @@
 
 @interface CustomTabbarViewController : UITabBarController
 
+- (void)changeTabBtnSelected:(int)index;
+
+- (void)isHiddenTab;
+
+- (void)isShowTab;
 
 @end

@@ -42,9 +42,12 @@
     }
     //大P为key,由接口决定,也有可能不需要该三行代码
     NSString *JsonStr = parameters.mj_JSONString;//转json字符串
+    
+    //    NSData *data = [NSJSONSerialization dataWithJSONObject:parameters options:NSJSONWritingPrettyPrinted error:nil];
+    //    NSString *JsonStr=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    
     NSMutableDictionary *parameterDic = [[NSMutableDictionary alloc]init];
     [parameterDic setObject:JsonStr forKey:@"P"];
-    
     
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.requestSerializer.timeoutInterval = 10.f;

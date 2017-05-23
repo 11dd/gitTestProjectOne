@@ -8,7 +8,7 @@
 
 #import "MineViewController.h"
 #import "LoginViewController.h"
-#import "GTMBase64_2.h"
+#import "GTMBase64.h"
 #import "NotificationViewController.h"
 #import "DDOrderViewController.h"
 #import "ChagePassWordViewController.h"

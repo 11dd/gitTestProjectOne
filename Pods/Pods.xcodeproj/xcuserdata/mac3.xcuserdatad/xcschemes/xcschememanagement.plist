@@ -9,7 +9,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GTMBase64.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -39,6 +59,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDCycleScrollView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,12 +77,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>175B076ED45EB1A3E40F58BA14036467</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2990FA25559F90CEF2A35A782456F42F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>586F2DFA9BDCC6675C2546793A69E5CC</key>
+		<key>2E8429A8B91865A55DFD31FDCC244DF6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,7 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8D8F854F67DA5EDB59BE1A85B25F5338</key>
+		<key>8642CC820CE8C5B88C113D7F47AF4BC3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9650B5ADCE86F1A055FAFC635284BDB5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +117,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A76EDE94F2C7591E4907E14CA552026C</key>
+		<key>A316B54C67E947D23CECD230FA5BFAEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C50AE6C6491BABE534FE382C54903C10</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E575D03E12464D1724F07410E5506D11</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F370FD80E432EF2C52E77CF629699CD8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

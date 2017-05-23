@@ -30,29 +30,27 @@
 
 #endif
 
-/** 友盟appKey */
-# define UMAppKey                  @"5465c050fd98c57e3a000b46"
 
 /** 微信appKey */
-# define WXAppKey                  @"wx75590c2744537220"
+# define WXAppKey                  @""
 
 /** 微信AppSecret */
-# define WXAppSecret               @"f052dfd9477127bac59d4679232e159c"
+# define WXAppSecret               @""
 
 /** QQAppID */
-# define QQAppID                   @"1105426859"
+# define QQAppID                   @""
 
 /** QQAppKey */
-# define QQAppKey                  @"ViPeKqd3nByLEh3v"
+# define QQAppKey                  @""
 
 /** 微博AppKey */
-# define SinaAppKey                @"2631344004"
+# define SinaAppKey                @""
 
 /** 微博AppSecret */
-# define SinaAppSecret             @"bebbd3dd3229600c9c8d739f82cf83a2"
+# define SinaAppSecret             @""
 
 /** 百度地图Key */
-# define BaiDuMapKey               @"9FDBhHClzU51GqvGLBeP7Wrx"
+# define BaiDuMapKey               @""
 
 /** 版本号 */
 

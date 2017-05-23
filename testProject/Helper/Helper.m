@@ -9,21 +9,10 @@
 #import "Helper.h"
 
 NSString* const kKeyUserId = @"UserId";
-NSString* const kKeyUserInfo = @"UserInfo";
 NSString* const kKeyUserName = @"UserName";
-NSString* const kKeyUserpwd = @"Userpwd";
-NSString* const kKeyUserAvatar = @"UserAvatar";
 NSString* const kKeyUserToken = @"UserToken";
-NSString* const kKeyUserStatus = @"UserStatus";
-NSString* const kKeyUserPushMode = @"UserPushMode";
-NSString* const kKeyUserSecurity = @"UserSecurity";
-NSString* const kKeyUserChoiceAddr = @"choiceaddr";
-NSString* const kKeyUserAddNumber = @"addNumberstr";
-NSString* const kKeyxiaoquName = @"xiaoquName";
 
 UITabBarController *rootcontroller;
-
-
 
 @implementation Helper
 
@@ -39,10 +28,8 @@ UITabBarController *rootcontroller;
     }
 }
 
-
 +(void)showLoadingWithView:(UIView *)aView
 {
-    
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:aView animated:YES];
     hud.labelText = @"加载中…";
     //hud.color = [UIColor redColor];
@@ -53,7 +40,6 @@ UITabBarController *rootcontroller;
 +(void)hiddonLoadingWithView:(UIView *)aView
 {
     [MBProgressHUD hideAllHUDsForView:aView animated:YES];
-    
 }
 
 + (void)showReturnAlert:(NSString *)alert
@@ -69,8 +55,7 @@ UITabBarController *rootcontroller;
 {
     MBProgressHUD* hud = nil;
     if (controller.view) {
-        hud = [MBProgressHUD showHUDAddedTo:controller.view
-                                   animated:YES];
+        hud = [MBProgressHUD showHUDAddedTo:controller.view animated:YES];
     }
     hud.yOffset = yoffset;
     //  hud.offset = CGPointMake(0.f, 1000000.f);
@@ -98,6 +83,7 @@ UITabBarController *rootcontroller;
 
 + (NSMutableAttributedString *)stringToAttributedString:(NSString*)tempStr NSMakeRange:(int)num
 {
+    //num表示多少位,不是第几位
     NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:tempStr];
     //颜色
     [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0,num)];
@@ -105,7 +91,6 @@ UITabBarController *rootcontroller;
     //字体
     [attrString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:kh(35)] range:NSMakeRange(0,num)];
     [attrString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:kh(25)] range:NSMakeRange(num,tempStr.length-num)];
-
     
     return attrString;
 }
@@ -319,15 +304,17 @@ UITabBarController *rootcontroller;
 }
 
 
-
 //存储用户姓名
 + (void)saveUserName:(NSString*)userName {
+    
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setValue:userName forKey:kKeyUserName];
     [userDefaults synchronize];
 }
+
 //获取用户姓名
 + (NSString*)fetchUserName {
+    
     NSString* userId = @"";
     NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
     if ([userDefaults stringForKey:kKeyUserName]) {
@@ -336,103 +323,21 @@ UITabBarController *rootcontroller;
     return userId;
 }
 
-
-+ (void)saveUserpwd:(NSString*)pwd {
-    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setValue:pwd forKey:kKeyUserpwd];
-    [userDefaults synchronize];
-}
-+ (NSString*)fetchUserpwd {
-    NSString * userpwd = nil;
-    NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
-    if ([userDefaults objectForKey:kKeyUserpwd]) {
-        userpwd = [userDefaults objectForKey:kKeyUserpwd];
-    }
-    return userpwd;
-}
-
-
 //存储用户Token
 + (void)saveUserToken:(NSString*)userToken {
+    
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setValue:userToken forKey:kKeyUserToken];
     [userDefaults synchronize];
 }
+
 //获取用户Token
 + (NSString*)fetchUserToken {
+    
     NSString *userToken = nil;
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     if ([userDefaults objectForKey:kKeyUserToken]) {
         userToken = [userDefaults objectForKey:kKeyUserToken];
-    }
-    return userToken;
-}
-
-
-//存储用户 选择发生地
-+ (void)saveChoiceAddr:(NSString*)addrstr {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setValue:addrstr forKey:kKeyUserChoiceAddr];
-    [userDefaults synchronize];
-}
-//获取用户 选择发生地
-+ (NSString*)fetchChoiceAddr {
-    NSString *addrstr = nil;
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if ([userDefaults objectForKey:kKeyUserChoiceAddr]) {
-        addrstr = [userDefaults objectForKey:kKeyUserChoiceAddr];
-    }
-    return addrstr;
-}
-
-//存储用户 选择发生地编码
-+ (void)saveChoiceAddNumeber:(NSString*)addNumberstr {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setValue:addNumberstr forKey:kKeyUserAddNumber];
-    [userDefaults synchronize];
-}
-//获取用户 选择发生地编码
-+ (NSString*)fetchChoiceAddNumber {
-    NSString *addNumberstr = nil;
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if ([userDefaults objectForKey:kKeyUserAddNumber]) {
-        addNumberstr = [userDefaults objectForKey:kKeyUserAddNumber];
-    }
-    return addNumberstr;
-}
-
-
-//存储用户Status
-+ (void)saveUserPushMode:(NSString *)status {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setValue:status forKey:kKeyUserStatus];
-    [userDefaults synchronize];
-}
-
-//获取用户Status
-+ (NSString*)fetchUserPushMode {
-    NSString *userToken = @"0";
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if ([userDefaults objectForKey:kKeyUserStatus]) {
-        userToken = [userDefaults objectForKey:kKeyUserStatus];
-    }
-    return userToken;
-}
-
-//存储用户验证码比对是否成功 yes 成功 no 不成功
-+ (void)saveUserSecurity:(BOOL)security {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setValue:[NSString stringWithFormat:@"%d", security] forKey:kKeyUserSecurity];
-    [userDefaults synchronize];
-}
-
-//获取用户验证码比对结果
-+ (BOOL)fetchUserSecurity {
-    BOOL userToken = NO;
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if ([userDefaults objectForKey:kKeyUserSecurity]) {
-        NSString *temp = [userDefaults objectForKey:kKeyUserSecurity];
-        userToken = temp.boolValue;
     }
     return userToken;
 }
@@ -457,6 +362,7 @@ UITabBarController *rootcontroller;
 {
     return rootcontroller;
 }
+
 
 #pragma mark 判空
 
@@ -708,7 +614,6 @@ static NSString * const FORM_FLE_INPUT = @"file";//字段名  根据接口命名
 {
     [self addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
 }
-
 
 
 @end

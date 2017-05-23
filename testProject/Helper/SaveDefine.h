@@ -15,20 +15,19 @@
 
 
 //存储手机号
-#define DDPhoneNumber   @"UserPhoneNumber"
+#define KDPhoneNumber   @"UserPhoneNumber"
 //存储账号id
-#define DDId            @"UserId"
+#define KDId            @"UserId"
 //存储头像URL
-#define DDHeaderImgURL  @"UserHeaderImgURL"
+#define KDHeaderImgURL  @"UserHeaderImgURL"
 //存储真实名字
-#define DDRealName      @"UserRealName"
+#define KDRealName      @"UserRealName"
 //存储昵称
-#define DDNickname      @"UserNickname"
+#define KDNickname      @"UserNickname"
 //存储性别
-#define DDSex           @"UserSex"
+#define KDSex           @"UserSex"
 //存储密码
-#define DDpassword      @"UserPassword"
-
+#define KDpassword      @"UserPassword"
 
 
 

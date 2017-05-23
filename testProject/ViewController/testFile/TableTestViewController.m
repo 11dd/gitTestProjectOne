@@ -255,11 +255,7 @@ static NSString *identify = @"TestTableViewCell";
 #pragma - mark - 实际计算高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [tableView fd_heightForCellWithIdentifier:identify cacheByIndexPath:indexPath configuration:^(TestTableViewCell *cell)
-            {
-                [self configCell:cell indexpath:indexPath];
-            }];
-    
+    return 120;
 }
 
 

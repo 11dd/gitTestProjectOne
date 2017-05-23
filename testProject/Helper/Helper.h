@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
 #import "IQKeyboardManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -75,35 +74,11 @@ NS_ASSUME_NONNULL_BEGIN
 //获取用户姓名
 + (NSString*)fetchUserName;
 
-//存储用户 选择发生地编码
-+ (void)saveChoiceAddNumeber:(NSString*)addNumberstr;
-
-//获取用户 选择发生地编码
-+ (NSString*)fetchChoiceAddNumber;
-
-//存储用户密码
-+ (void)saveUserpwd:(NSString*)userpwd;
-
-//获取用户密码
-+ (NSString*)fetchUserpwd;
-
 //存储用户Token
 + (void)saveUserToken:(NSString*)userToken;
 
 //获取用户Token
 + (NSString*)fetchUserToken;
-
-//存储用户验证码比对是否成功 yes 成功 no 不成功
-+ (void)saveUserSecurity:(BOOL)security;
-
-//获取用户验证码比对结果
-+ (BOOL)fetchUserSecurity;
-
-//存储用户Status
-+ (void)saveUserPushMode:(NSString *)status;
-
-//获取用户Status
-+ (NSString*)fetchUserPushMode;
 
 
 /**< 返回错误提示信息 */
@@ -117,20 +92,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)saveRootController:(UITabBarController *)controller;
 
-+ (UITabBarController     *)fetchRootController;
++ (UITabBarController*)fetchRootController;
+
 
 //上传图片文件
 +(void)postRequestWithURL: (NSString *)url picFileName: (NSString *)picFileName dataimage:(UIImage *)image andBlock:(void(^)(NSDictionary *retDic,NSError *error))block;
 
+
 //判空
-+ (BOOL) isBlankString:(NSString *)string;
++ (BOOL)isBlankString:(NSString *)string;
 
 //邮箱格式验证
-+(BOOL)verifyemail:(NSString * )str;
++(BOOL)verifyemail:(NSString *)str;
 
 //身份证格式验证
 +(BOOL)verifyIDCardNumber:(NSString *)value;
-
 
 @end
 NS_ASSUME_NONNULL_END
@@ -140,7 +116,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIButton (custom)
 
--(void)settitlebuttomandImagetop;
+- (void)settitlebuttomandImagetop;
 
 - (void)setTextSize:(CGFloat)size;
 

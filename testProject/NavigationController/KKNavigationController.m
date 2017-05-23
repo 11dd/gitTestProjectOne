@@ -13,10 +13,11 @@
 #import <math.h>
 #import "AppDelegate.h"
 
+#define kw(R)               (R) * (KScreenWidth) / 320.0
+#define kh(R)               (R) * (KScreenHeight) / 568.0
+
 @interface KKNavigationController ()<UIGestureRecognizerDelegate>
 {
-    CGFloat _kscH;
-    CGFloat _kscW;
     
     CGPoint startTouch;
     
@@ -24,8 +25,8 @@
     UIView *blackMask;
  
     BOOL _isLeftMoving;
-
 }
+
 @property (nonatomic,retain) NSMutableArray *screenShotsList;
 
 @property (nonatomic,retain) UIView *backgroundView;
@@ -46,17 +47,6 @@
         
     }
     return self;
-}
-
--(void)ksc{
-    
-    if (KScreenHeight == 480 ) {
-        _kscH = 1;
-        _kscW = 1;
-    }else{
-        _kscH = KScreenHeight / 568;
-        _kscW = KScreenWidth / 320;
-    }
 }
 
 - (void)dealloc
@@ -120,7 +110,7 @@
 
 - (void)moveViewWithX:(float)x
 {
-    x = x>(320 * _kscW)?(320 * _kscW):x;
+    x = x>(kw(320))?(kw(320)):x;
     x = x<0?0:x;
     
     CGRect frame = self.view.frame;
@@ -199,7 +189,7 @@
         if (touchPoint.x - startTouch.x > 60)
         {
             [UIView animateWithDuration:0.3 animations:^{
-                [self moveViewWithX:320 * _kscW];
+                [self moveViewWithX:kw(320)];
             } completion:^(BOOL finished) {
                 
                 [self popViewControllerAnimated:NO];
